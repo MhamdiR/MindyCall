@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+
+{% block navbar %}
+
+    <nav class="navbar navbar-toggleable-md primary-nav-dark">
+
+        <a class="navbar-brand" href="#">Mindy'Call</a>
+        <div class="collapse navbar-collapse" id="navbar-primary">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">À propos de nous </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Liste Medecins </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Contacts</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+{% endblock %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+    <section class="login p-fixed d-flex text-center bg-primary common-img-bg">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <div class="login-card card-block auth-body">
+                        <form class="md-float-material" method="post">
+                            {% csrf_token %}
+                            <div class="auth-box">
+                                <div class="row m-b-20">
+                                    <div class="col-md-12">
+                                        <h3 class="text-left txt-primary"> Connexion</h3>
+                                    </div>
+                                </div>
+                                <hr/>
+                                {% if form.non_field_errors %}
+                                    <div class="non-field-errors text-left">
+                                        {% for err in form.non_field_errors %}
+                                            <p style="color:red" class="form-error">{{ err }}</p>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                                <div class="input-group">
+                                    <input type="email" id="{{ orm.username.id_for_label }}" name="{{ form.username.html_name }}"  class="form-control" placeholder="Tapez votre E-mail">
+                                    <span class="md-line"></span>
+                                </div>
+                                {% if form.username.errors %}
+                                    <div class="form.username.errors text-left">
+                                        {% for err in form.username.errors %}
+                                            <p style="color:red" class="form-error">{{ err }}</p>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                                <div class="input-group">
+                                    <input type="password" id="{{ form.password.id_for_label }}" name="{{ form.password.html_name }}"  class="form-control" placeholder="Tapez votre Mot de passe">
+                                    <span class="md-line"></span>
+                                </div>
+                                {% if form.password.errors %}
+                                    <div class="form.password.errors text-left">
+                                        {% for err in form.password.errors %}
+                                            <p style="color:red" class="form-error">{{ err }}</p>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                                <div class="row m-t-25 text-left">
+                                    <div class="col-sm-7 col-xs-12">
+                                        <div class="checkbox-fade fade-in-primary">
+                                            <label>
+                                                <input type="checkbox" value="">
+                                                <span class="cr"><i class="cr-icon icofont icofont-ui-check txt-primary"></i></span>
+                                                <span class="text-inverse">Remember me</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5 col-xs-12 forgot-phone text-right">
+                                        <a href="forgot-password.html" class="text-right f-w-600 text-inverse"> Mot de passe oublié?</a>
+                                    </div>
+                                </div>
+                                <div class="row m-t-30">
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">
+                                            Connexion
+                                        </button>
+                                    </div>
+                                </div>
+                                <hr/>
+                                <p style="color: black"> Vous n'avez pas de compte ? <a href="#"> Inscrivez vous</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

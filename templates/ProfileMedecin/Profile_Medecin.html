@@ -1,0 +1,624 @@
+<body>
+
+
+<div class="page-body">
+
+    <div class="row justify-content-lg-center">
+        <div class="col-lg-10 ">
+
+            <div class="tab-header">
+                <ul class="nav nav-tabs md-tabs tab-timeline" role="tablist" id="mytab">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#binfo"
+                           role="tab">Demandes
+                            Consultation</a>
+                        <div class="slide"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#review"
+                           role="tab">Publications</a>
+                        <div class="slide"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#contacts"
+                           role="tab">Calendrier</a>
+                        <div class="slide"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#personal"
+                           role="tab">Informations
+                            Personnelles</a>
+                        <div class="slide"></div>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="tab-content">
+
+                <div class="tab-pane" id="personal" role="tabpanel">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">À propos</h5>
+                            <button id="edit-btn" type="button"
+                                    class="btn btn-sm btn-primary waves-effect waves-light f-right">
+                                <i class="icofont icofont-edit"></i>
+                            </button>
+                        </div>
+                        <div class="card-block">
+                            <div class="view-info">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="general-info">
+                                            <div class="row">
+                                                <div
+                                                        class="col-lg-12 col-xl-6">
+                                                    <table
+                                                            class="table m-0">
+                                                        <tbody>
+                                                        <tr>
+                                                            <th
+                                                                    scope="row">
+                                                                Nom
+                                                                &
+                                                                Prénom
+                                                            </th>
+                                                            <td>Bousnina
+                                                                Mohamed
+                                                                Iheb
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th
+                                                                    scope="row">
+                                                                Sexe
+                                                            </th>
+                                                            <td>Homme
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th
+                                                                    scope="row">
+                                                                Date
+                                                                de
+                                                                naissance
+                                                            </th>
+                                                            <td>20 Juin
+                                                                1996
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th
+                                                                    scope="row">
+                                                                Adresse
+                                                            </th>
+                                                            <td>Boumhal,
+                                                                Ben
+                                                                Arous
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div
+                                                        class="col-lg-12 col-xl-6">
+                                                    <table
+                                                            class="table">
+                                                        <tbody>
+                                                        <tr>
+                                                            <th
+                                                                    scope="row">
+                                                                Email
+                                                            </th>
+                                                            <td>bousnina.iheb96@gmail.com
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th
+                                                                    scope="row">
+                                                                Téléphone
+                                                            </th>
+                                                            <td>(+216)
+                                                                23914412
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th
+                                                                    scope="row">
+                                                                Prix
+                                                                visite
+                                                            </th>
+                                                            <td>
+                                                                70dt
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-header-text">Description
+                                    </h5>
+                                    <button id="edit-info-btn" type="button"
+                                            class="btn btn-sm btn-primary waves-effect waves-light f-right">
+                                        <i
+                                                class="icofont icofont-edit"></i>
+                                    </button>
+                                </div>
+                                <div class="card-block user-desc">
+                                    <div class="view-desc">
+                                        <p>
+
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="tab-pane active" id="binfo" role="tabpanel">
+
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Task list</h5>
+                                </div>
+                                <div class="card-block task-list">
+                                    <div class="table-responsive">
+                                        <table id="simpletable"
+                                               class="table dt-responsive task-list-table table-striped table-bordered nowrap">
+                                            <thead>
+                                            <tr>
+
+                                                <th>Nom Patient
+                                                </th>
+                                                <th>Description
+                                                </th>
+                                                <th>Type Consultation
+                                                </th>
+                                                <th>Date Rendez-vous
+                                                </th>
+                                                <th>
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody
+                                                    class="task-page">
+                                            <tr>
+
+                                                <td><a href="#"><img class="img-fluid img-circle"
+                                                                     src="assets/images/lam3y.jpg"></a>
+                                                    Bousnina96
+                                                </td>
+                                                <td>
+                                                    Est
+                                                    ce
+                                                    que
+                                                    je
+                                                    peux
+                                                    prendre
+                                                    un
+                                                    rendez-vous
+                                                    Le
+                                                    12/08/2019
+
+                                                </td>
+                                                <td>
+                                                    Appel
+                                                    Vidéo
+                                                </td>
+                                                <td>
+                                                    <input type="date"
+                                                           class="form-control"/>
+
+                                                </td>
+                                                <td
+                                                        class="text-center">
+
+                                                    <button type="button"
+                                                            class="btn btn-primary m-r-10">
+                                                        Valider
+                                                    </button>
+
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+
+                                                <td><a href="#"><img class="img-fluid img-circle"
+                                                                     src="assets/images/avatar-2.png"></a>
+                                                    Rania1996
+                                                </td>
+                                                <td>
+
+
+                                                </td>
+                                                <td>
+                                                    Appel
+                                                    Vidéo
+                                                </td>
+                                                <td>
+                                                    <input type="date"
+                                                           class="form-control"/>
+
+                                                </td>
+                                                <td
+                                                        class="text-center">
+
+                                                    <button type="button"
+                                                            class="btn btn-primary m-r-10">
+                                                        Valider
+                                                    </button>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td><a href="#"><img class="img-fluid img-circle"
+                                                                     src="assets/images/wahb.jpg"></a>
+                                                    Wahb1920
+                                                </td>
+                                                <td>
+                                                    Test Test
+
+                                                </td>
+                                                <td>
+                                                    Appel
+                                                    Vocal
+                                                </td>
+                                                <td>
+                                                    <input type="date"
+                                                           class="form-control"/>
+
+                                                </td>
+                                                <td
+                                                        class="text-center">
+
+                                                    <button type="button"
+                                                            class="btn btn-primary m-r-10">
+                                                        Valider
+                                                    </button>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td><a href="#"><img class="img-fluid img-circle"
+                                                                     src="assets/images/avatar-3.png"></a>
+                                                    Farah2018
+                                                </td>
+                                                <td>
+
+
+                                                </td>
+                                                <td>
+                                                    Discussion instantanée
+                                                </td>
+                                                <td>
+                                                    <input type="date"
+                                                           class="form-control"/>
+
+                                                </td>
+                                                <td
+                                                        class="text-center">
+
+                                                    <button type="button"
+                                                            class="btn btn-primary m-r-10">
+                                                        Valider
+                                                    </button>
+
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="tab-pane" id="contacts" role="tabpanel">
+
+                </div>
+
+                <div class="tab-pane" id="review" role="tabpanel">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-text">Publications</h5>
+                        </div>
+                        <div class="card-block">
+                            <div class="row  justify-content-md-center">
+                                <div class="col-md-7">
+                                    <div class="card bg-white">
+                                        <div
+                                                class="post-new-contain row card-block">
+                                            <div
+                                                    class="col-md-1 col-xs-3 post-profile">
+                                                <img src="assets/images/profileee.JPG"
+                                                     class="img-fluid width-100 img-circle "
+                                                     alt="">
+                                            </div>
+                                            <form
+                                                    class="col-md-11 col-xs-9">
+                                                <div class="">
+<textarea
+        id="post-message"
+        class="form-control post-input"
+        rows="3"
+        cols="10"
+        required=""
+        placeholder="Ecrivez quelque Chose....."></textarea>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div
+                                                class="post-new-footer b-t-muted p-15">
+<span class="image-upload m-r-15"
+      data-toggle="tooltip"
+      data-placement="top"
+      title=""
+      data-original-title="Add Photos">
+<label for="file-input"
+       class="file-upload-lbl">
+<i
+        class="icofont icofont-image text-muted"></i>
+</label>
+<input id="file-input"
+       type="file"
+       accept="image/x-png,image/gif,image/jpeg">
+</span>
+                                            <i
+                                                    class="icofont icofont-ui-user text-muted"></i>
+                                            <i
+                                                    class="icofont icofont-ui-map text-muted"></i>
+                                            <span><a href="#"
+                                                     id="post-new"
+                                                     class="btn btn-primary waves-effect waves-light f-right">Publier</a></span>
+
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div
+                                                class="bg-white p-relative">
+                                            <div
+                                                    class="input-group wall-elips">
+<span class="dropdown-toggle addon-btn text-muted f-right wall-dropdown"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="true"
+      role="tooltip"></span>
+                                                <div
+                                                        class="dropdown-menu dropdown-menu-right b-none services-list">
+                                                    <a class="dropdown-item"
+                                                       href="#">Modifier
+                                                        Publication</a>
+                                                    <a class="dropdown-item"
+                                                       href="#">Supprimer
+                                                        Publication</a>
+                                                </div>
+                                            </div>
+                                            <div class="card-block">
+                                                <div
+                                                        class="media">
+                                                    <div
+                                                            class="media-left media-middle friend-box">
+                                                        <a
+                                                                href="#">
+                                                            <img class="media-object img-circle m-r-20"
+                                                                 src="assets/images/profileee.JPG"
+                                                                 alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div
+                                                            class="media-body">
+                                                        <div
+                                                                class="chat-header">
+                                                            Iheb
+                                                            Bousnina
+                                                        </div>
+                                                        <div
+                                                                class="f-13 text-muted">
+                                                            A
+                                                            l'instant
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="lightgallery"
+                                                 class="lightgallery-popup">
+                                                <div class=""
+                                                     data-responsive="assets/images/timeline/img1.jpg 375, img/1-480.jpg 480, img/1.jpg 800"
+                                                     data-src="assets/images/timeline/img1.jpg"
+                                                     data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
+                                                    <a
+                                                            href="#">
+                                                        <img src="assets/images/Publication.JPG"
+                                                             class="img-fluid width-70 center"
+                                                             alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="card-block">
+                                                <div
+                                                        class="timeline-details">
+                                                    <div
+                                                            class="chat-header">
+                                                        Malla
+                                                        ahnaaa
+                                                    </div>
+                                                    <p
+                                                            class="text-muted">
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div
+                                                    class="card-block b-b-theme b-t-theme social-msg">
+                                                <a href="#">
+                                                    <i
+                                                            class="icofont icofont-heart-alt text-muted">
+                                                    </i>
+                                                    <span
+                                                            class="b-r-theme">J'aimes
+(20)</span>
+                                                </a>
+                                                <a href="#">
+                                                    <i
+                                                            class="icofont icofont-comment text-muted">
+                                                    </i>
+                                                    <span
+                                                            class="b-r-theme">Commentaires
+(2)</span>
+                                                </a>
+                                                <a href="#">
+                                                    <i
+                                                            class="icofont icofont-share text-muted">
+                                                    </i>
+                                                    <span>Partages
+(10)</span>
+                                                </a>
+
+
+                                            </div>
+                                            <div
+                                                    class="card-block user-box">
+                                                <div
+                                                        class="p-b-20">
+<span
+        class="f-14"><a
+        href="#">Commentaires
+(2)</a>
+</span>
+                                                    <span
+                                                            class="f-right">
+</span>
+                                                </div>
+                                                <div
+                                                        class="media">
+                                                    <a class="media-left"
+                                                       href="#">
+                                                        <img class="media-object img-circle m-r-20"
+                                                             src="assets/images/wahb.jpg"
+                                                             alt="Generic placeholder image">
+                                                    </a>
+                                                    <div
+                                                            class="media-body b-b-theme social-client-description">
+                                                        <div
+                                                                class="chat-header">
+                                                            Wahb
+                                                            Cherchari<span
+                                                                class="text-muted">A
+l'instant</span>
+                                                        </div>
+                                                        <p
+                                                                class="text-muted">
+                                                            khayba
+                                                            :(
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                        class="media">
+                                                    <a class="media-left"
+                                                       href="#">
+                                                        <img class="media-object img-circle m-r-20"
+                                                             src="assets/images/lam3y.jpg"
+                                                             alt="Generic placeholder image">
+                                                    </a>
+                                                    <div
+                                                            class="media-body b-b-theme social-client-description">
+                                                        <div
+                                                                class="chat-header">
+                                                            lam3y
+                                                            lam3oun<span
+                                                                class="text-muted">A
+l'instant</span>
+                                                        </div>
+                                                        <p
+                                                                class="text-muted">
+                                                            sahha
+                                                            sahby
+                                                            iheb
+                                                            tahfouna
+                                                            el
+                                                            taswira
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                        class="media">
+                                                    <a class="media-left"
+                                                       href="#">
+                                                        <img class="media-object img-circle m-r-20"
+                                                             src="assets/images/profileee.JPG"
+                                                             alt="Generic placeholder image">
+                                                    </a>
+                                                    <div
+                                                            class="media-body">
+                                                        <form
+                                                                class="">
+                                                            <div
+                                                                    class="">
+<textarea
+        class="f-13 form-control msg-send"
+        rows="3"
+        cols="10"
+        required=""
+        placeholder="Commenter ....."></textarea>
+                                                                <div
+                                                                        class="text-right m-t-20">
+                                                                    <a href="#"
+                                                                       class="btn btn-primary waves-effect waves-light">Publier</a>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+<!-- Mirrored from flatable.phoenixcoded.net/default/navbar-dark.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Jun 2019 23:59:36 GMT -->
+
+</html>

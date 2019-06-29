@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% load static %}
+{% block navbar %}
+    <nav class="navbar navbar-toggleable-md primary-nav-dark">
+        <button class="navbar-toggler navbar-toggler-right btn" type="button" data-toggle="collapse"
+                data-target="#navbar-primary">
+            <i class="icofont icofont-navigation-menu m-0"></i>
+        </button>
+        <a class="navbar-brand" href="#">Mindy'Call</a>
+        <div class="collapse navbar-collapse" id="navbar-primary">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="#">À propos de nous</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Liste Medecins </a></li>
+                <li class="nav-item"><a class="nav-link " href="#">Contacts</a></li>
+            </ul>
+            {% if user.is_authenticated %}
+                <form class="form-inline">
+                    <div class="nav-item">
+                        <a href="#">
+                            <img class="img-40 user-img img-circle" src="{% static "assets/images/profileee.JPG" %}"
+                                 alt="User-Profile-Image">
+                            <span class="m-l-10">{{ user.get_full_name }}</span>
+                            <i class="icofont icofont-rounded-down"></i>
+                        </a>
+                        <ul class="navbar-varient-submenu profile-sub-menu">
+                            <li><a href="#"><i class="icon-user"></i> Profil</a></li>
+                            <li><a href="#"><i class="icofont-eye"></i> Consultations</a></li>
+                            <li><a href="#"><i class="icon-envelope-open"></i> Messages</a></li>
+                            <li><a href="#"><i class="icon-settings"></i> Paramètres</a></li>
+                            <li><a href="{% url 'logout' %}"><i class="icon-logout"></i> Déconnexion</a></li>
+                        </ul>
+                    </div>
+                </form>
+            {% endif %}
+        </div>
+    </nav>
+{% endblock %}
+
+
+{% block content %}
+    {% if user.is_authenticated %}
+
+        <div class="page-body">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cover-profile">
+                        <div class="profile-bg-img">
+                            <img class="profile-bg-img img-fluid"
+                                 src="{% static "assets/images/user-profile/bg-img1.jpg" %}" alt="bg-img">
+                            <div class="card-block user-info">
+                                <div class="col-md-12">
+
+                                    <div class="media-left">
+                                        <a href="#" class="profile-image">
+                                            <img class="user-img img-circle" src="{% static "assets/images/profileee.JPG" %}"
+                                                 alt="user-img" style="width: 120px">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body row">
+                                        <div class="col-lg-12">
+                                            <div class="user-title">
+                                                <h2>Iheb Bousnina</h2>
+                                                <span class="text-white">Coach</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="pull-right cover-btn">
+                                                <button type="button" class="btn btn-primary m-r-10"><i class="icofont icofont-plus"></i>
+                                                    Ajouter
+                                                </button>
+                                                <button type="button" class="btn btn-primary"><i class="icofont icofont-ui-messaging"></i>
+                                                    Message
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    {% else %}
+        <section class="login p-fixed d-flex text-center bg-primary common-img-bg">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="login-card card-block auth-body">
+                            <div class="auth-box">
+                                <p style="color: black"> Vous n'êtes pas Connecté ?</p>
+                                <div class="row m-t-30">
+                                    <div class="col-md-12">
+                                        <a href="{% url 'login' %}"
+                                           class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">
+                                            Conntectez vous
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a href="{% url 'login' %}">login</a>
+    {% endif %}
+{% endblock %}
