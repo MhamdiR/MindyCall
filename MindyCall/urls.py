@@ -20,5 +20,6 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('back_office_dashboard_admin/', include('backoffice.urls') , name='backoffice'),
     path('', TemplateView.as_view(template_name='Doctor/home.html'), name='home'),
 ]
