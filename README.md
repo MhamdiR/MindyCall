@@ -1,5 +1,5 @@
 # Mindy Call Developper Documentation
-### Installation
+## Installation
 
 Clone the github repository.
 
@@ -26,14 +26,14 @@ $ (venv) python manage.py runserver
 ```
 
 
-### Usage
-####Administrator
+## Usage
+###Administrator
 navigate to : http://localhost:8000/back_office_dashboard_admin/
 >**admin email** : admin@mindycall.tn
 
 >**password**: adminadmin
 
-####Doctor
+###Doctor
 navigate to : http://localhost:8000/
 >**doctor email** : iheb@mindycall.tn
 
