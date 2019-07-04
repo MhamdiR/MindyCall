@@ -27,13 +27,13 @@ $ (venv) python manage.py runserver
 
 
 ## Usage
-###Administrator
+### Administrator
 navigate to : http://localhost:8000/back_office_dashboard_admin/
 >**admin email** : admin@mindycall.tn
 
 >**password**: adminadmin
 
-###Doctor
+### Doctor
 navigate to : http://localhost:8000/
 >**doctor email** : iheb@mindycall.tn
 
